@@ -25,6 +25,7 @@
 
     /* ========== Width ========== */
     --verticalNavBarWidth: 90px;
+    --horizontalNavBarHeight: 65px;
 }
 
 a {

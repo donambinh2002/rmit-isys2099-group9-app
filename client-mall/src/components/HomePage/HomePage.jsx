@@ -1,12 +1,10 @@
 import ProductList from "./Product/ProductList";
-import NavBar from "../NavBar/NavBar";
 
 const HomePage = () => {
   return (
     <section className="">
-      <NavBar />
       {/* Search Bar */}
-      <form method="POST" action="/home/search" className="mb-3">
+      <div className="container my-3">
         <div className="row">
           <div className="col">
             <input
@@ -39,10 +37,10 @@ const HomePage = () => {
             </button>
           </div>
         </div>
-      </form>
+      </div>
 
       {/* Product List */}
-      <div className="container px-4 px-lg-5 mt-5">
+      <div className="container px-2 px-lg-2 mt-5">
         <ProductList />
       </div>
     </section>

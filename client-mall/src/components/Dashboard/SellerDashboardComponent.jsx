@@ -7,24 +7,16 @@ import Product from "./Items/Product";
 // Icons Imported
 import { BiSearch } from "react-icons/bi";
 import { IoAddOutline } from "react-icons/io5";
-import { IconSetting } from "../../utils/IconSettings";
+import { IconSetting } from "../../utils/IconSetting";
 
-import { getDataAPI } from "../../api/fetchAPI";
 import PopUp from "./PopUp/PopUp";
+import { getDataAPI } from "../../../src/api/apiRequest";
 const SellerDashboardComponent = () => {
   useEffect(() => {
     const fetchData = async () => {
-      // TODO: Wait for BE endpoint and then implement this
-    };
-
-    fetchData();
-  }, []);
-
-  useEffect(() => {
-    const fetchData = async () => {
       try {
-        const result = await await getDataAPI("product");
-        setProductData(result);
+        const result = await getDataAPI("product");
+        setProductData(result.data);
       } catch (error) {
         // Handle the error
         console.error("Error fetching data:", error);

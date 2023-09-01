@@ -1,10 +1,8 @@
 .login_wrapper {
-    height: 100vh;
+    height: calc(100vh - var(--horizontalNavBarHeight));
 }
 
-.register_wrapper {
-    height: 100vh;
-}
+
 
 /* Login Components */
 .login_wrapper .login_container .login_inner_container,
